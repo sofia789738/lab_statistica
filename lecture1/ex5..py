@@ -1,5 +1,5 @@
 import sys
-from ex3 import Fibonacci
+from lab_statistica.lecture4.ex3 import Fibonacci
 
     
 #A function that creates a new list which contains only elements with even index of the Fibonacci sequece

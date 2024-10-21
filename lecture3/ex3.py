@@ -20,6 +20,7 @@ def histogram (N) :
       ax.hist (sample_hist, color = 'blue') 
       n_bins = sturges(N)
       bin_edges = np.linspace (xMin, xMax, n_bins)
+      plt.savefig('histogram3')
 
       plt.show ()
       
