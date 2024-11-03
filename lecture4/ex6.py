@@ -7,25 +7,39 @@ import random
 import matplotlib.pyplot as plt
 import sys
 import numpy as np
-import scipy.stats as st
+
+#inverse of exp CDF
+def inverse (y, lambd) :
+    x = -1*np.log(1-y)/lambd
+    return x
+
+def sturges (l) :
+   return int(np.ceil( 1 + 3.322 * np.log(l)))
 
 def main () :
-    tot = int(sys.argv[i])
-    x = np.linspace (-200, 200., 100)
-    pdf = st.expon.pdf(x, loc=0, scale=1)
-    F = np.log(pdf)
-    randlist_y = []
+    #parameters as input
+    tot = int(sys.argv[1])
+    tau = float (sys.argv[2])
+    lambd = 1./tau
+
+    #to generate random variables   
+    randlist = []
     for i in range (0, tot) :
-        yi = random.random ()
-        if yi = 
-           randlist_y.append (yi)
-    for i in range (0, tot) :
-        x_i = st.expon.pdf(F, loc=0, scale=1)
-        randlist.append(x_i)
-        
+        randlist.append(inverse (random.random(), lambd))
 
+    #to create the histogram
+    xMin = min(randlist)
+    xMax = max(randlist)
+    n_bins = sturges(tot)
+    bin_edges = np.linspace (xMin, xMax, n_bins)
 
-
+    fig, ax = plt.subplots (nrows = 1, ncols = 1)
+    ax.set_title ('Histogram of random numbers', size=14)
+    ax.set_xlabel ('random value')
+    ax.set_ylabel ('events in bin')
+    ax.hist (randlist, bins = bin_edges, color = 'blue')
+    plt.savefig('Histogram of random numbers_inverse function algorithm')
+    plt.show ()
 
 
 
