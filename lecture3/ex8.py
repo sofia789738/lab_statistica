@@ -7,11 +7,6 @@ def main() :
    pdf = st.expon.pdf(x, loc=0, scale=4)
    plt.plot(x, pdf, label="expPDF")
    plt.savefig('ex8_exp')
-
-
-
-
-
          
 if __name__ == "__main__":
     main ()

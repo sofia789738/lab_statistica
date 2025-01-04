@@ -12,7 +12,7 @@ def main () :
     plt.plot(x, y_1, label="binomial_pmf")
     plt.savefig('binomial_pmf')
 
-    plt.clf
+    plt.clf()
     
     y_2 = binom.cdf(x, n, prob)
     plt.plot(x, y_2, label="binomial_cdf")

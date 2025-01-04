@@ -16,7 +16,6 @@ def bisection (xmin, xmax, g, prec=0.0001) :
     return av
     
 def main() :
-    x = np.linspace (-10, 10, 100)
     print('the zero is:', bisection (0, 4, lambda x : np.cos(x), prec=0.0001))
     
 

@@ -1,4 +1,5 @@
-#Display the distributions of events from the two files of the previous exercises, overlaid, finding the best visualization for the comparison between the two histograms.
+#Display the distributions of events from the two files of the previous exercises, 
+#overlaid, finding the best visualization for the comparison between the two histograms.
 
 import matplotlib.pyplot as plt
 import numpy as np

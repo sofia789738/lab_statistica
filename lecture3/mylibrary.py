@@ -36,8 +36,8 @@ def hist(s) :
       n = len(sample)
       sturges = int(np.ceil( 1 + 3.322 * np.log(n)))
       fig, ax = plt.subplots (nrows=1, ncols=1)
-      ax.hist (sample_hist, color = 'blue') 
-      n_bins = sturges
+      ax.hist (sample, color = 'blue') 
+      n_bins = sturges(n)
       bin_edges = np.linspace (xMin, xMax, n_bins)
       
       plt.show ()

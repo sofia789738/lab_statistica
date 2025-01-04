@@ -24,5 +24,8 @@ def histogram (N) :
 
       plt.show ()
       
+def main () :
+   histogram(int(sys.argv[1]))
 
-histogram(int(sys.argv[1]))
+if __name__ == "__main__":
+    main ()

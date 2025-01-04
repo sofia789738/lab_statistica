@@ -11,7 +11,6 @@ import sys
 def sturges (l) :
    return int(np.ceil( 1 + 3.322 * np.log(l)))
 
-
 def rand_range (min, max) :
          x = min + (max-min)*random.random()
          return x
